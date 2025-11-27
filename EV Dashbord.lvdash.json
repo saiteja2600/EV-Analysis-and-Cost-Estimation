@@ -1,0 +1,731 @@
+{
+  "datasets": [
+    {
+      "name": "5522c6e9",
+      "displayName": "Electric Vehicle Specifications Dataset",
+      "queryLines": [
+        "select * from electric_vehicles_spec"
+      ],
+      "catalog": "firstcatloag2026",
+      "schema": "cardataschema"
+    },
+    {
+      "name": "8da915e4",
+      "displayName": "electric_vehicles_segment",
+      "queryLines": [
+        "SELECT * FROM firstcatloag2026.cardataschema.electric_vehicles_segment"
+      ]
+    },
+    {
+      "name": "9e1e26af",
+      "displayName": "Electric Vehicles Market Segmentation Data Overview",
+      "queryLines": [
+        "select * from electric_vehicles_segment"
+      ],
+      "catalog": "firstcatloag2026",
+      "schema": "cardataschema"
+    },
+    {
+      "name": "590d6d87",
+      "displayName": "Electric Vehicles Longest Range Models Dataset",
+      "queryLines": [
+        "select * from electric_vehicles_top_range"
+      ],
+      "catalog": "firstcatloag2026",
+      "schema": "cardataschema"
+    }
+  ],
+  "pages": [
+    {
+      "name": "60344d7b",
+      "displayName": "Dashbord for the EV Cars",
+      "layout": [
+        {
+          "widget": {
+            "name": "performance-capacity-cost-overview",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "590d6d87",
+                  "fields": [
+                    {
+                      "name": "brand",
+                      "expression": "`brand`"
+                    },
+                    {
+                      "name": "model",
+                      "expression": "`model`"
+                    },
+                    {
+                      "name": "range_km",
+                      "expression": "`range_km`"
+                    },
+                    {
+                      "name": "acceleration_0_100_s",
+                      "expression": "`acceleration_0_100_s`"
+                    },
+                    {
+                      "name": "battery_capacity_kwh",
+                      "expression": "`battery_capacity_kwh`"
+                    },
+                    {
+                      "name": "battery_type",
+                      "expression": "`battery_type`"
+                    },
+                    {
+                      "name": "seats",
+                      "expression": "`seats`"
+                    },
+                    {
+                      "name": "car_body_type",
+                      "expression": "`car_body_type`"
+                    },
+                    {
+                      "name": "price_ex_showroom",
+                      "expression": "`price_ex_showroom`"
+                    },
+                    {
+                      "name": "on_road_price",
+                      "expression": "`on_road_price`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 1,
+              "widgetType": "table",
+              "encodings": {
+                "columns": [
+                  {
+                    "fieldName": "brand",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "imageUrlTemplate": "{{ @ }}",
+                    "imageTitleTemplate": "{{ @ }}",
+                    "imageWidth": "",
+                    "imageHeight": "",
+                    "linkUrlTemplate": "{{ @ }}",
+                    "linkTextTemplate": "{{ @ }}",
+                    "linkTitleTemplate": "{{ @ }}",
+                    "linkOpenInNewTab": true,
+                    "type": "string",
+                    "displayAs": "string",
+                    "visible": true,
+                    "order": 0,
+                    "title": "Brand",
+                    "allowSearch": false,
+                    "alignContent": "left",
+                    "allowHTML": false,
+                    "highlightLinks": false,
+                    "useMonospaceFont": false,
+                    "preserveWhitespace": false,
+                    "cellFormat": {
+                      "default": {
+                        "foregroundColor": null
+                      },
+                      "rules": []
+                    }
+                  },
+                  {
+                    "fieldName": "model",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "imageUrlTemplate": "{{ @ }}",
+                    "imageTitleTemplate": "{{ @ }}",
+                    "imageWidth": "",
+                    "imageHeight": "",
+                    "linkUrlTemplate": "{{ @ }}",
+                    "linkTextTemplate": "{{ @ }}",
+                    "linkTitleTemplate": "{{ @ }}",
+                    "linkOpenInNewTab": true,
+                    "type": "string",
+                    "displayAs": "string",
+                    "visible": true,
+                    "order": 1,
+                    "title": "Model",
+                    "allowSearch": false,
+                    "alignContent": "left",
+                    "allowHTML": false,
+                    "highlightLinks": false,
+                    "useMonospaceFont": false,
+                    "preserveWhitespace": false
+                  },
+                  {
+                    "fieldName": "range_km",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "imageUrlTemplate": "{{ @ }}",
+                    "imageTitleTemplate": "{{ @ }}",
+                    "imageWidth": "",
+                    "imageHeight": "",
+                    "linkUrlTemplate": "{{ @ }}",
+                    "linkTextTemplate": "{{ @ }}",
+                    "linkTitleTemplate": "{{ @ }}",
+                    "linkOpenInNewTab": true,
+                    "type": "string",
+                    "displayAs": "string",
+                    "visible": true,
+                    "order": 2,
+                    "title": "Range KM",
+                    "allowSearch": false,
+                    "alignContent": "left",
+                    "allowHTML": false,
+                    "highlightLinks": false,
+                    "useMonospaceFont": false,
+                    "preserveWhitespace": false
+                  },
+                  {
+                    "fieldName": "acceleration_0_100_s",
+                    "numberFormat": "0.00",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "imageUrlTemplate": "{{ @ }}",
+                    "imageTitleTemplate": "{{ @ }}",
+                    "imageWidth": "",
+                    "imageHeight": "",
+                    "linkUrlTemplate": "{{ @ }}",
+                    "linkTextTemplate": "{{ @ }}",
+                    "linkTitleTemplate": "{{ @ }}",
+                    "linkOpenInNewTab": true,
+                    "type": "float",
+                    "displayAs": "number",
+                    "visible": true,
+                    "order": 3,
+                    "title": "Acceleration",
+                    "allowSearch": false,
+                    "alignContent": "right",
+                    "allowHTML": false,
+                    "highlightLinks": false,
+                    "useMonospaceFont": false,
+                    "preserveWhitespace": false
+                  },
+                  {
+                    "fieldName": "battery_capacity_kwh",
+                    "numberFormat": "0.00",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "imageUrlTemplate": "{{ @ }}",
+                    "imageTitleTemplate": "{{ @ }}",
+                    "imageWidth": "",
+                    "imageHeight": "",
+                    "linkUrlTemplate": "{{ @ }}",
+                    "linkTextTemplate": "{{ @ }}",
+                    "linkTitleTemplate": "{{ @ }}",
+                    "linkOpenInNewTab": true,
+                    "type": "float",
+                    "displayAs": "number",
+                    "visible": true,
+                    "order": 4,
+                    "title": "Battery Capacity KWH",
+                    "allowSearch": false,
+                    "alignContent": "right",
+                    "allowHTML": false,
+                    "highlightLinks": false,
+                    "useMonospaceFont": false,
+                    "preserveWhitespace": false
+                  },
+                  {
+                    "fieldName": "battery_type",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "imageUrlTemplate": "{{ @ }}",
+                    "imageTitleTemplate": "{{ @ }}",
+                    "imageWidth": "",
+                    "imageHeight": "",
+                    "linkUrlTemplate": "{{ @ }}",
+                    "linkTextTemplate": "{{ @ }}",
+                    "linkTitleTemplate": "{{ @ }}",
+                    "linkOpenInNewTab": true,
+                    "type": "string",
+                    "displayAs": "string",
+                    "visible": true,
+                    "order": 5,
+                    "title": "Batter Type",
+                    "allowSearch": false,
+                    "alignContent": "left",
+                    "allowHTML": false,
+                    "highlightLinks": false,
+                    "useMonospaceFont": false,
+                    "preserveWhitespace": false
+                  },
+                  {
+                    "fieldName": "seats",
+                    "numberFormat": "0",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "imageUrlTemplate": "{{ @ }}",
+                    "imageTitleTemplate": "{{ @ }}",
+                    "imageWidth": "",
+                    "imageHeight": "",
+                    "linkUrlTemplate": "{{ @ }}",
+                    "linkTextTemplate": "{{ @ }}",
+                    "linkTitleTemplate": "{{ @ }}",
+                    "linkOpenInNewTab": true,
+                    "type": "integer",
+                    "displayAs": "number",
+                    "visible": true,
+                    "order": 6,
+                    "title": "Seats",
+                    "allowSearch": false,
+                    "alignContent": "right",
+                    "allowHTML": false,
+                    "highlightLinks": false,
+                    "useMonospaceFont": false,
+                    "preserveWhitespace": false
+                  },
+                  {
+                    "fieldName": "car_body_type",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "imageUrlTemplate": "{{ @ }}",
+                    "imageTitleTemplate": "{{ @ }}",
+                    "imageWidth": "",
+                    "imageHeight": "",
+                    "linkUrlTemplate": "{{ @ }}",
+                    "linkTextTemplate": "{{ @ }}",
+                    "linkTitleTemplate": "{{ @ }}",
+                    "linkOpenInNewTab": true,
+                    "type": "string",
+                    "displayAs": "string",
+                    "visible": true,
+                    "order": 7,
+                    "title": "Car Body Type",
+                    "allowSearch": false,
+                    "alignContent": "left",
+                    "allowHTML": false,
+                    "highlightLinks": false,
+                    "useMonospaceFont": false,
+                    "preserveWhitespace": false
+                  },
+                  {
+                    "fieldName": "price_ex_showroom",
+                    "numberFormat": "0",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "imageUrlTemplate": "{{ @ }}",
+                    "imageTitleTemplate": "{{ @ }}",
+                    "imageWidth": "",
+                    "imageHeight": "",
+                    "linkUrlTemplate": "{{ @ }}",
+                    "linkTextTemplate": "{{ @ }}",
+                    "linkTitleTemplate": "{{ @ }}",
+                    "linkOpenInNewTab": true,
+                    "type": "integer",
+                    "displayAs": "number",
+                    "visible": true,
+                    "order": 8,
+                    "title": "Ex Show Room Price",
+                    "allowSearch": false,
+                    "alignContent": "right",
+                    "allowHTML": false,
+                    "highlightLinks": false,
+                    "useMonospaceFont": false,
+                    "preserveWhitespace": false
+                  },
+                  {
+                    "fieldName": "on_road_price",
+                    "numberFormat": "0.00",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "imageUrlTemplate": "{{ @ }}",
+                    "imageTitleTemplate": "{{ @ }}",
+                    "imageWidth": "",
+                    "imageHeight": "",
+                    "linkUrlTemplate": "{{ @ }}",
+                    "linkTextTemplate": "{{ @ }}",
+                    "linkTitleTemplate": "{{ @ }}",
+                    "linkOpenInNewTab": true,
+                    "type": "float",
+                    "displayAs": "number",
+                    "visible": true,
+                    "order": 9,
+                    "title": "On Road Price",
+                    "allowSearch": false,
+                    "alignContent": "right",
+                    "allowHTML": false,
+                    "highlightLinks": false,
+                    "useMonospaceFont": false,
+                    "preserveWhitespace": false,
+                    "description": "",
+                    "cellFormat": {
+                      "default": {
+                        "foregroundColor": {
+                          "themeColorType": "fontColor"
+                        }
+                      },
+                      "rules": []
+                    }
+                  }
+                ]
+              },
+              "invisibleColumns": [],
+              "allowHTMLByDefault": false,
+              "itemsPerPage": 10,
+              "paginationSize": "default",
+              "condensed": true,
+              "withRowNumber": false,
+              "firstNFrozenColumns": 0,
+              "frame": {
+                "showTitle": true,
+                "title": "Performance, Capacity & Cost Overview"
+              },
+              "style": {
+                "fontColor": {
+                  "dark": "#D3D3E4"
+                }
+              }
+            },
+            "specExtensions": {
+              "widgetBackgroundColor": {
+                "dark": "#2B534A"
+              },
+              "widgetBorderColor": {
+                "dark": "#092079"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 8,
+            "width": 6,
+            "height": 8
+          }
+        },
+        {
+          "widget": {
+            "name": "5fba2af1",
+            "multilineTextboxSpec": {
+              "lines": [
+                "# <span style=\"text-align:center;display:block;\"><span style=\"font-size: 36px;color: #FAFAFB;line-height: 1.5;\">**Electric Vehicle Performance & Value Analytics**</span></span>"
+              ]
+            },
+            "specExtensions": {
+              "widgetBackgroundColor": {
+                "dark": "#051A52"
+              },
+              "widgetBorderColor": {
+                "dark": "#131414"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 6,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "sum-average-cargo-volume-segment",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "5522c6e9",
+                  "fields": [
+                    {
+                      "name": "segment",
+                      "expression": "`segment`"
+                    },
+                    {
+                      "name": "countdistinct(range_km)",
+                      "expression": "COUNT(DISTINCT `range_km`)"
+                    },
+                    {
+                      "name": "countdistinct(brand)",
+                      "expression": "COUNT(DISTINCT `brand`)"
+                    },
+                    {
+                      "name": "countdistinct(model)",
+                      "expression": "COUNT(DISTINCT `model`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "line",
+              "encodings": {
+                "x": {
+                  "fieldName": "segment",
+                  "displayName": "Segment",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "y": {
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "fields": [
+                    {
+                      "fieldName": "countdistinct(range_km)",
+                      "displayName": "Range Km"
+                    },
+                    {
+                      "fieldName": "countdistinct(brand)",
+                      "displayName": "Brand"
+                    },
+                    {
+                      "fieldName": "countdistinct(model)",
+                      "displayName": "Model"
+                    }
+                  ],
+                  "axis": {
+                    "hideLabels": true,
+                    "hideGrid": false,
+                    "hideTitle": true
+                  }
+                },
+                "label": {
+                  "show": false
+                }
+              },
+              "frame": {
+                "title": "EV Segment Comparison: Range, Cargo & Acceleratio",
+                "showTitle": true,
+                "showDescription": true
+              },
+              "mark": {
+                "colors": [
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 10
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 2
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 3
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 4
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 5
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 6
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 7
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 8
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 9
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 10
+                  }
+                ],
+                "size": 0
+              }
+            },
+            "specExtensions": {
+              "widgetBackgroundColor": {
+                "dark": "#1A6169"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 2,
+            "width": 3,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "price-vs-range",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "5522c6e9",
+                  "fields": [
+                    {
+                      "name": "range_km",
+                      "expression": "`range_km`"
+                    },
+                    {
+                      "name": "countdistinct(segment)",
+                      "expression": "COUNT(DISTINCT `segment`)"
+                    },
+                    {
+                      "name": "count(on_road_price)",
+                      "expression": "COUNT(`on_road_price`)"
+                    },
+                    {
+                      "name": "countdistinct(brand)",
+                      "expression": "COUNT(DISTINCT `brand`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "line",
+              "encodings": {
+                "x": {
+                  "fieldName": "range_km",
+                  "axis": {
+                    "labelAngle": 90
+                  },
+                  "displayName": "Range Km",
+                  "scale": {
+                    "type": "categorical",
+                    "sort": {
+                      "by": "natural-order-reversed"
+                    }
+                  }
+                },
+                "y": {
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "fields": [
+                    {
+                      "fieldName": "countdistinct(segment)",
+                      "displayName": "Count of Segment"
+                    },
+                    {
+                      "fieldName": "count(on_road_price)",
+                      "displayName": "Count of Road Price"
+                    },
+                    {
+                      "fieldName": "countdistinct(brand)"
+                    }
+                  ],
+                  "axis": {
+                    "hideGrid": false,
+                    "hideLabels": true,
+                    "hideTitle": true
+                  },
+                  "format": {
+                    "type": "number-plain",
+                    "abbreviation": "compact",
+                    "decimalPlaces": {
+                      "type": "max",
+                      "places": 8
+                    },
+                    "hideGroupSeparator": false
+                  }
+                },
+                "color": {
+                  "legend": {
+                    "hideTitle": false,
+                    "hide": true
+                  }
+                },
+                "label": {
+                  "show": false
+                }
+              },
+              "frame": {
+                "showTitle": true,
+                "title": "Price vs Range",
+                "showDescription": true
+              },
+              "mark": {
+                "colors": [
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 2
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 1
+                  }
+                ],
+                "size": 0
+              }
+            },
+            "specExtensions": {
+              "widgetBackgroundColor": {
+                "dark": "#184061"
+              }
+            }
+          },
+          "position": {
+            "x": 3,
+            "y": 2,
+            "width": 3,
+            "height": 6
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS"
+    },
+    {
+      "name": "b2cac84b",
+      "displayName": "Global Filters",
+      "layout": [
+        {
+          "widget": {
+            "name": "cfd031bb",
+            "spec": {
+              "version": 2,
+              "widgetType": "filter-single-select",
+              "encodings": {},
+              "frame": {
+                "showTitle": true
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 2
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_GLOBAL_FILTERS"
+    }
+  ],
+  "uiSettings": {
+    "theme": {
+      "widgetHeaderAlignment": "ALIGNMENT_UNSPECIFIED"
+    },
+    "applyModeEnabled": false
+  }
+}
